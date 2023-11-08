@@ -3,11 +3,12 @@ const path = require('path');
 const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
-const SequelizeStore = require('connect-session-sequelize')(session.Store);
+
 
 // Import controllers and connection
-const routes = require('./controllers/api/api');
+const routes = require('./controllers');
 const sequelize = require('./config/connection');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 // Use Express and PORT
 const app = express();
@@ -16,10 +17,7 @@ const PORT = process.env.PORT || 3001;
 // Set up sessions with cookies
 const sess = {
 	secret: 'Super secret secret',
-	cookie: {
-		// Stored in milliseconds
-		maxAge: 24 * 60 * 60 * 1000, // expires after 1 day
-	},
+	cookie: {},
 	resave: false,
 	saveUninitialized: true,
 	store: new SequelizeStore({
@@ -31,16 +29,21 @@ const sess = {
 app.use(session(sess));
 
 // Express Handlebars
-const hbs = exphbs.create({ helpers });
+const hbs = exphbs.create({});
 
 // Set up Handlebars
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
+app.set('views', path.join(__dirname, 'views'));
 
 // Set up middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use('/public', express.static(path.join(__dirname, 'public')));
+app.use((req, res, next) => {
+	res.locals.loggedIn = req.session.loggedIn;
+	next();
+});
 
 app.use(routes);
 
