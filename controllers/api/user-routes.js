@@ -1,4 +1,4 @@
-const { User, Post, Edit, Delete, Comment } = require('../../models');
+const { User, Blog, Comment } = require('../../models');
 const router = require('express').Router();
 
 function requireLogin(req, res, next) {
