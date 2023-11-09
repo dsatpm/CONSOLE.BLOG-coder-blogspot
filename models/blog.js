@@ -9,7 +9,7 @@ Blog.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    text: {
+    content: {
       type: DataTypes.STRING,
       allowNull: false,
     },

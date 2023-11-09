@@ -2,7 +2,11 @@
 module.exports = {
 	content: ['./views/**/*.handlebars', './public/js/**/*.js'],
 	theme: {
-		extend: {},
+		extend: {
+			fontFamily: {
+				martianMono: ['Martian Mono', 'monospace']
+			}
+		},
 	},
 	plugins: [],
 };

@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes cursor {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.cursor {
+  @apply bg-yellow-500;
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.125em;
+  height: 1em;
+  animation: cursor 0.7s infinite;
+}
