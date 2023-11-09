@@ -1,4 +1,4 @@
-// Import Express, Sequelize, Session, Handlebars, and Routes
+// Imports Express, Sequelize, Session, Handlebars, and Routes
 const path = require('path');
 const express = require('express');
 const exphbs = require('express-handlebars');
@@ -25,7 +25,7 @@ const sess = {
 // Use sessions
 app.use(session(sess));
 
-// Express Handlebars
+// Express Handlebars setup
 const hbs = exphbs.create({});
 
 // Set up Handlebars

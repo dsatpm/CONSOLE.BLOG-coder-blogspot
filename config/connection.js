@@ -1,8 +1,10 @@
+// Imports the Sequelize constructor from the library
 const Sequelize = require('sequelize');
 require('dotenv').config();
 
 let sequelize;
 
+// Connects to database, either via JawsDB or local mySQL
 if (process.env.JAWSDB_URL) {
 	sequelize = new Sequelize(process.env.JAWSDB_URL);
 } else {
@@ -18,4 +20,5 @@ if (process.env.JAWSDB_URL) {
 	);
 }
 
+// Exports connection
 module.exports = sequelize;

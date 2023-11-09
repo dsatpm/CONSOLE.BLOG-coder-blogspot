@@ -1,7 +1,9 @@
+// Variable declarations
 const text = 'A place for sharing your coding journey.';
 const speed = 100;
 let index = 0;
 
+// Typewriter effect
 function typeWriter() {
   if (index < text.length) {
     const typedText = document.getElementById('typing-text');

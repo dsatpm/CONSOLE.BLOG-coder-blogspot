@@ -1,3 +1,4 @@
+// Import router and all API routes
 const router = require('express').Router();
 
 // Home Route
