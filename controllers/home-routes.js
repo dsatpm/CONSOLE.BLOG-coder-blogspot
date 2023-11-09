@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
 
 // Login Route
 router.get('/login', async (req, res) => {
-	res.render('login');
+	res.render('login', { hideNavbar: true, hideFooter: true });
 });
 
 // Logout Route
@@ -19,7 +19,7 @@ router.get('/logout', (req, res) => {
 
 // Signup Route
 router.get('/signup', async (req, res) => {
-	res.render('signup');
+	res.render('signup', { hideNavbar: true, hideFooter: true });
 });
 
 // Home Route
@@ -35,6 +35,11 @@ router.get('/blog', (req, res) => {
 // About route
 router.get('/about', (req, res) => {
 	res.render('about');
+});
+
+// Contact route
+router.get('/contact', (req, res) => {
+	res.render('contact');
 });
 
 module.exports = router;
