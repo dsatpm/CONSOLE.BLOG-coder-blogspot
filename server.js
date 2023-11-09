@@ -1,14 +1,12 @@
 // Import Express, Sequelize, Session, Handlebars, and Routes
 const path = require('path');
 const express = require('express');
-const session = require('express-session');
 const exphbs = require('express-handlebars');
-
-
-// Import controllers and connection
+const session = require('express-session');
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
+
 
 // Use Express and PORT
 const app = express();

@@ -9,11 +9,6 @@ function requireLogin(req, res, next) {
   }
 }
 
-// GET /api/users
-router.get('/', (req, res) => {
-  // logic to get all users
-});
-
 // GET /api/users/:id
 router.get('/:id', (req, res) => {
   // logic to get user by id

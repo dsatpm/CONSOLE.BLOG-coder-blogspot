@@ -1,11 +1,14 @@
 {
   "name": "console.blog",
   "version": "1.0.0",
+  "description": "A blog site where users can create an account, create posts, and comment on other users' posts.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js",
-    "seed": "node seeds/index.js"
+    "seed": "node seeds/index.js",
+    "build": "tailwindcss -i ./public/css/tailwind.css -o ./public/css/output.css",
+    "watch": "tailwindcss -i ./public/css/tailwind.css -o ./public/css/output.css --watch"
   },
   "keywords": [],
   "author": "",
@@ -17,10 +20,12 @@
     "express": "^4.18.2",
     "express-handlebars": "^7.1.2",
     "express-session": "^1.17.3",
+    "handlebars": "^4.7.8",
     "mysql2": "^3.6.2",
     "sequelize": "^6.33.0"
   },
   "devDependencies": {
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.0.1",
+    "tailwindcss": "^3.3.5"
   }
 }

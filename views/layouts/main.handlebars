@@ -1,32 +1,34 @@
+<!DOCTYPE html>
 
-<html>
-	<head>
-		<meta charset='utf-8' />
-		<title>{{pageTitle}}</title>
-	</head>
-	<body>
-		<header>
-			<h1>{{blogTitle}}</h1>
-			<nav>
-				<ul>
-					{{#each navLinks}}
-						<li><a href='{{this.url}}'>{{this.label}}</a></li>
-					{{/each}}
-				</ul>
-			</nav>
-		</header>
-		<main>
-			<h2>Welcome to {{blogTitle}}!</h2>
-			<p>{{blogDescription}}</p>
-			<h3>Recent Posts</h3>
-			<ul>
-				{{#each recentPosts}}
-					<li><a href='{{this.url}}'>{{this.title}}</a></li>
-				{{/each}}
-			</ul>
-		</main>
-		<footer>
-			<p>&copy; {{currentYear}} {{blogTitle}}</p>
-		</footer>
-	</body>
+<head>
+
+	<meta charset='utf-8' />
+	<meta name='viewport' content='width=device-width, initial-scale=1.0 minimum-scale=1.0' />
+	<title>{{> title}}</title>
+	{{!-- Tailwind --}}
+	<link rel="stylesheet" href="/public/css/output.css" />
+	{{!-- Font Awesome --}}
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css'
+		integrity='sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=='
+		crossorigin='anonymous' referrerpolicy='no-referrer' />
+
+</head>
+
+<header>
+	{{> navbar}}
+</header>
+
+<body>
+
+	<main>
+
+		{{{ body }}}
+
+	</main>
+
+
+	{{> footer}}
+
+</body>
+
 </html>
