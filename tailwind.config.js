@@ -4,7 +4,8 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				martianMono: ['Martian Mono', 'monospace']
+				martianMono: ['Martian Mono', 'monospace'],
+				rubik: ['Rubik Mono One', 'sans-serif']
 			}
 		},
 	},

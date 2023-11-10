@@ -1,25 +1,31 @@
-{{!-- Nav Section --}}
-<nav class="bg-gray-900">
-  <div class="max-w-screen-xl mx-auto px-2 sm:px-6 lg:px-8">
-    <div class="relative flex items-center justify-between h-16">
-      <div class="flex-shrink-0 flex items-center">
-        <a href="/blog" class="text-white text-2xl font-bold">{{> title}}</a>
+<div class="flex-shrink-0 flex items-center justify-center w-full h-full bg-black">
+  {{> title}}
+</div>
+<nav class="bg-black h-28 flex justify-between items-center border-t-2 border-b-2">
+  <div class="max-w-screen-xl mx-auto w-screen">
+    <div class="flex items-center justify-between">
+
+      {{!-- Nav Links (Left-aligned) --}}
+      <div class="hidden sm:flex sm:items-center sm:justify-start">
+        <a href="/home" class="hover:text-yellow-500 px-3 py-2 mx-4 my-2 text-sm sm:text-base font-medium">Home</a>
+        <a href="/blog" class="hover:text-yellow-500 px-3 py-2 mx-4 my-2 text-sm sm:text-base font-medium">Blog</a>
+        <a href="/about" class="hover:text-yellow-500 px-3 py-2 mx-4 my-2 text-sm sm:text-base font-medium">About</a>
+        <a href="/contact"
+          class="hover:text-yellow-500 px-3 py-2 mx-4 my-2 text-sm sm:text-base font-medium">Contact</a>
       </div>
 
-      {{!-- Nav Links --}}
-      <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-        <a href="/home" class="text-gray-300 hover:text-yellow-500 px-3 py-2 mx-4 my-2 rounded-sm text-sm font-medium">Home</a>
-        <a href="/blog" class="text-gray-300 hover:text-yellow-500 px-3 py-2 mx-4 my-2 rounded-sm text-sm font-medium">Blog</a>
-        <a href="/about" class="text-gray-300 hover:text-yellow-500 px-3 py-2 mx-4 my-2 rounded-sm text-sm font-medium">About</a>
-        <a href="/contact" class="text-gray-300 hover:text-yellow-500 px-3 py-2 mx-4 my-2 rounded-sm text-sm font-medium">Contact</a>
-      </div>
-
-      {{!-- Login/Signup Forms --}}
-      <div class="flex items-center">
-        <a href="/login" class="text-gray-300 hover:text-white"><button class="bg-blue-900 hover:bg-blue-800 px-4 py-2 rounded-md text-sm font-medium ">Login</button></a>
-        <a href="/signup" class="bg-gray-300 text-gray-800 hover:bg-gray-200 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium ml-4">Sign up</a>
+      {{!-- Login/Signup Forms (Right-aligned) --}}
+      <div class="flex items-center justify-center sm:justify-end">
+        <a href="/login" class="hover:text-white">
+          <button
+            class="text-white hover:text-yellow-500 h-full text-sm sm:text-base font-medium border-l-2 py-11 px-20">Login</button>
+        </a>
+        <a href="/signup">
+          <button
+            class="bg-white text-black hover:bg-yellow-500 hover:text-black h-full text-sm sm:text-base font-medium py-11 px-20">Sign
+            up</button>
+        </a>
       </div>
     </div>
   </div>
 </nav>
-

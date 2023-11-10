@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html {
-  @apply font-martianMono;
+  @apply font-martianMono text-white bg-black m-0 p-0;
 }
 
 @keyframes cursor {
