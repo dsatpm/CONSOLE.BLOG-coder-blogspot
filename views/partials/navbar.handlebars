@@ -1,28 +1,31 @@
-<div class="flex-shrink-0 flex items-center justify-center w-full h-full bg-black">
+<div class="flex-shrink-0 flex items-center justify-center bg-white border-r-4 border-black hover:border-r-4">
   {{> title}}
 </div>
-<nav class="bg-black h-28 flex justify-between items-center border-t-2 border-b-2">
+<nav class="bg-white border-black h-32 flex justify-between items-center border-t-4 border-b-4">
   <div class="max-w-screen-xl mx-auto w-screen">
     <div class="flex items-center justify-between">
 
       {{!-- Nav Links (Left-aligned) --}}
-      <div class="hidden sm:flex sm:items-center sm:justify-start">
-        <a href="/home" class="hover:text-yellow-500 px-3 py-2 mx-4 my-2 text-sm sm:text-base font-medium">Home</a>
-        <a href="/blog" class="hover:text-yellow-500 px-3 py-2 mx-4 my-2 text-sm sm:text-base font-medium">Blog</a>
-        <a href="/about" class="hover:text-yellow-500 px-3 py-2 mx-4 my-2 text-sm sm:text-base font-medium">About</a>
-        <a href="/contact"
-          class="hover:text-yellow-500 px-3 py-2 mx-4 my-2 text-sm sm:text-base font-medium">Contact</a>
+      <div class="relative sm:flex sm:items-center sm:justify-start">
+        <a href="/home"
+          class="bg-white border-black border-2 border-l-4 text-black sm:text-md text-lg sm:text-md lg:text-xl font-medium py-11 px-4 sm:px-6 lg:px-8">Home</a>
+        <a href="/blog"
+          class="bg-white border-black border-2 text-black sm:text-md text-lg sm:text-md lg:text-xl font-medium py-11 px-4 sm:px-6 lg:px-8">Blog</a>
       </div>
 
       {{!-- Login/Signup Forms (Right-aligned) --}}
-      <div class="flex items-center justify-center sm:justify-end">
-        <a href="/login" class="hover:text-white">
+      <div class="flex items-center justify-center sm:justify-end h-full">
+        {{#if loggedIn}}
+        {{> logout}}
+        {{else}}
+        <a href="/login">
           <button
-            class="text-white hover:text-yellow-500 h-full text-sm sm:text-base font-medium border-l-2 py-11 px-20">Login</button>
+            class="bg-white text-black border-black border-2 border-l-4 sm:text-md text-lg sm:text-md lg:text-xl font-medium py-11 px-4 sm:px-6 lg:px-8">Login</button>
         </a>
+        {{/if}}
         <a href="/signup">
           <button
-            class="bg-white text-black hover:bg-yellow-500 hover:text-black h-full text-sm sm:text-base font-medium py-11 px-20">Sign
+            class="bg-black text-white border-black border-2 border-l-4 border-r-4 text-lg sm:text-md lg:text-xl font-medium py-11 px-4 sm:px-6 lg:px-8">Sign
             up</button>
         </a>
       </div>

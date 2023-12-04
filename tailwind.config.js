@@ -5,7 +5,12 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				martianMono: ['Martian Mono', 'monospace'],
-				rubik: ['Rubik Mono One', 'sans-serif']
+				archivo: ['Archivo', 'sans-serif'],
+				publicSans: ['Public Sans', 'sans-serif'],
+				
+			},
+			color: {
+				primary: '#121212'
 			}
 		},
 	},

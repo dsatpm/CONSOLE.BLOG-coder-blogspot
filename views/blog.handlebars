@@ -1,26 +1,20 @@
-{{!-- Blog Section --}}
-<div class="bg-gray-100 p-4 h-screen">
-  <form class="mb-4 mt-10 w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-1/3">
-    <h2 class="text-2xl sm:text-3xl font-extrabold">blog.addEventListener('submit', newPost);</h2>
-    <p class="text-sm sm:text-base md:text-lg">Submit a story, good or bad, about your coding journey.</p>
-    <label for="title" class="block mb-2 font-bold text-gray-700 mt-4">Title:</label>
-    <input type="text" id="title" name="title"
-      class="w-full px-3 py-2 mb-3 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline">
-    <label for="content" class="block mb-2 font-bold text-gray-700">Content:</label>
-    <textarea id="content" name="content"
-      class="w-full px-3 py-2 mb-3 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"></textarea>
-    <button type="submit"
-      class="px-4 py-2 font-bold text-white bg-blue-900 rounded hover:bg-blue-800 focus:outline-none focus:shadow-outline-blue">Submit</button>
-  </form>
-  <hr class="my-8">
-  <div class="recent-posts p-4 mt-10">
-    <h3 class="text-2xl sm:text-3xl font-extrabold">let blog = [{recent.userPosts}];</h3>
-    <p class="text-sm sm:text-base md:text-lg">Look at stories from other user to inspire, or relate.</p>
-    {{#each blogPosts}}
-    <div class="post bg-white p-4 mb-4 rounded shadow">
-      <h2 class="text-xl sm:text-2xl font-bold mb-2">{{this.title}}</h2>
-      <p class="text-gray-700">{{this.content}}</p>
-    </div>
-    {{/each}}
+<!-- Blog Section -->
+<div
+  class="container mx-auto flex flex-col md:flex-row items-center justify-around space-y-4 md:space-y-0 md:space-x-4 bg-gray-500 min-h-screen">
+  <div class="bg-yellow-500 text-black w-full p-3 md:w-1/2 border-4 border-black neo-shadow m-4">
+    <form class="w-full p-3" id="newPost">
+      <h2 class="text-xl font-extrabold">blog.addEventListener('submit', newPost);</h2>
+      <p class="text-sm sm:text-base">Submit a story, good or bad, about your coding journey.</p>
+      <label for="title" id="title" class="block mb-2 font-bold text-black mt-4">Title:</label>
+      <input type="text" id="title" name="title"
+        class="w-full px-3 py-2 mb-3 leading-tight text-black shadow appearance-none border-2 border-black neo-shadow">
+      <label for="content" id="content" class="block mb-2 font-bold text-black">Content:</label>
+      <textarea id="content" name="content"
+        class="w-full px-3 py-2 mb-3 leading-tight text-black shadow appearance-none border-black border-2 neo-shadow"></textarea>
+      <button type="submit" class="bg-black text-black mt-4 w-full md:w-1/2 ml-3"><span
+          class="bg-violet-500 font-semibold block p-2 sm:p-3 md:p-4 lg:p-5 xl:p-6 2xl:p-7 -translate-x-2 -translate-y-2 border-black border-2 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl hover:-translate-y-3 active:translate-x-0 active:translate-y-0 transition-all">Submit</span></button>
+    </form>
   </div>
 </div>
+
+<script src="/public/js/write-post.js"></script>

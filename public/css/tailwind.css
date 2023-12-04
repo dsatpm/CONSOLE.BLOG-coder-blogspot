@@ -3,7 +3,11 @@
 @tailwind utilities;
 
 html {
-  @apply font-martianMono text-white bg-black m-0 p-0;
+  @apply text-black bg-white m-0 p-0;
+}
+
+main {
+  @apply bg-gray-500 font-archivo;
 }
 
 @keyframes cursor {
@@ -19,10 +23,14 @@ html {
 }
 
 .cursor {
-  @apply bg-yellow-500;
+  @apply bg-black;
   display: inline-block;
   vertical-align: middle;
   width: 0.125em;
   height: 1em;
   animation: cursor 0.7s infinite;
+}
+
+.neo-shadow {
+  box-shadow: 10px 10px black;
 }

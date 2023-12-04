@@ -29,17 +29,10 @@ router.get('/home', (req, res) => {
 
 // Blog route
 router.get('/blog', (req, res) => {
+	if (!req.session.loggedIn) {
+	return res.redirect('/login');
+}
 	res.render('blog');
-});
-
-// About route
-router.get('/about', (req, res) => {
-	res.render('about');
-});
-
-// Contact route
-router.get('/contact', (req, res) => {
-	res.render('contact');
 });
 
 module.exports = router;
