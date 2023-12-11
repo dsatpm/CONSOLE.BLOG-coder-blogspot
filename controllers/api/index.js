@@ -1,8 +1,10 @@
 //  Import router and all API routes
 const router = require('express').Router();
 const userRoutes = require('./user-routes');
+const homeRoutes = require('./home-routes');
 
 // Use API routes
+router.use('/', homeRoutes);  
 router.use('/users', userRoutes);
 
 // Export router

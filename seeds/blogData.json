@@ -1,0 +1,122 @@
+[
+	{
+		"title": "The Art of Coding",
+		"date_created": "2023-01-15T08:00:00Z",
+		"content": "Exploring the beauty of coding and its impact on the digital world.",
+		"user_id": 1
+	},
+	{
+		"title": "JavaScript: Unraveling the Mysteries",
+		"date_created": "2023-02-02T12:30:00Z",
+		"content": "Diving deep into the world of JavaScript and its versatile applications.",
+		"user_id": 2
+	},
+	{
+		"title": "Data Analytics: A Practical Guide",
+		"date_created": "2023-03-10T10:45:00Z",
+		"content": "Practical tips and insights into the realm of data analytics for aspiring analysts.",
+		"user_id": 3
+	},
+	{
+		"title": "Building Responsive Web Designs with CSS",
+		"date_created": "2023-04-05T14:15:00Z",
+		"content": "Mastering CSS techniques for creating visually stunning and responsive web designs.",
+		"user_id": 4
+	},
+	{
+		"title": "SQL Fundamentals for Beginners",
+		"date_created": "2023-05-20T09:20:00Z",
+		"content": "A beginner's guide to understanding and using SQL for effective database management.",
+		"user_id": 5
+	},
+	{
+		"title": "Exploring Frontend Frameworks: React vs. Vue",
+		"date_created": "2023-06-08T11:10:00Z",
+		"content": "Comparing the features and advantages of React and Vue for frontend development.",
+		"user_id": 6
+	},
+	{
+		"title": "The Evolution of Full Stack Development",
+		"date_created": "2023-07-17T15:45:00Z",
+		"content": "Tracing the evolution of full stack development and its impact on modern applications.",
+		"user_id": 7
+	},
+	{
+		"title": "Mastering the Art of Code Reviews",
+		"date_created": "2023-08-22T13:25:00Z",
+		"content": "Best practices and strategies for effective code reviews in collaborative projects.",
+		"user_id": 8
+	},
+	{
+		"title": "The Power of Node.js in Backend Development",
+		"date_created": "2023-09-30T10:00:00Z",
+		"content": "Harnessing the power of Node.js for scalable and efficient backend development.",
+		"user_id": 9
+	},
+	{
+		"title": "Introduction to Python for Web Development",
+		"date_created": "2023-10-12T09:50:00Z",
+		"content": "A beginner's guide to using Python for web development and backend scripting.",
+		"user_id": 10
+	},
+	{
+		"title": "Web Security: Best Practices and Common Pitfalls",
+		"date_created": "2023-11-05T14:30:00Z",
+		"content": "Understanding and implementing best practices for securing web applications.",
+		"user_id": 11
+	},
+	{
+		"title": "GraphQL: Simplifying API Development",
+		"date_created": "2023-12-18T12:15:00Z",
+		"content": "Exploring the benefits of GraphQL in simplifying API development and data fetching.",
+		"user_id": 12
+	},
+	{
+		"title": "The Role of DevOps in Modern Software Development",
+		"date_created": "2024-01-02T11:55:00Z",
+		"content": "Understanding the essential role of DevOps in streamlining software development processes.",
+		"user_id": 13
+	},
+	{
+		"title": "Effective Use of Git: Branching and Merging Strategies",
+		"date_created": "2024-02-14T09:40:00Z",
+		"content": "Guidelines for effective use of Git, focusing on branching and merging strategies.",
+		"user_id": 14
+	},
+	{
+		"title": "Machine Learning in Everyday Applications",
+		"date_created": "2024-03-20T14:20:00Z",
+		"content": "Exploring practical applications of machine learning in everyday software development.",
+		"user_id": 15
+	},
+	{
+		"title": "Continuous Integration with Jenkins: A Comprehensive Guide",
+		"date_created": "2024-04-09T13:10:00Z",
+		"content": "A comprehensive guide to setting up continuous integration using Jenkins in development workflows.",
+		"user_id": 16
+	},
+	{
+		"title": "Exploring the World of NoSQL Databases",
+		"date_created": "2024-05-25T15:30:00Z",
+		"content": "Comparing and contrasting popular NoSQL databases for modern data storage solutions.",
+		"user_id": 17
+	},
+	{
+		"title": "The Future of Web Development: Trends to Watch",
+		"date_created": "2024-06-11T11:45:00Z",
+		"content": "Anticipating and discussing emerging trends shaping the future of web development.",
+		"user_id": 18
+	},
+	{
+		"title": "Optimizing Website Performance: Tips and Tricks",
+		"date_created": "2024-07-28T10:05:00Z",
+		"content": "Practical tips and tricks for optimizing website performance and user experience.",
+		"user_id": 19
+	},
+	{
+		"title": "Cybersecurity in Software Development: A Developer's Guide",
+		"date_created": "2024-08-15T14:50:00Z",
+		"content": "A developer's guide to understanding and implementing cybersecurity measures in software development.",
+		"user_id": 20
+	}
+]

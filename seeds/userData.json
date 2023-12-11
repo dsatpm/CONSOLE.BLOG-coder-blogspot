@@ -1,0 +1,52 @@
+[
+	{
+		"name": "Elena",
+		"email": "elena@yahoo.com",
+		"password": "password12345"
+	},
+	{
+		"name": "Kai",
+		"email": "kai@gmail.com",
+		"password": "password12345"
+	},
+	{
+		"name": "Nina",
+		"email": "nina@hotmail.com",
+		"password": "password12345"
+	},
+	{
+		"name": "Raj",
+		"email": "raj@gmail.com",
+		"password": "password12345"
+	},
+	{
+		"name": "Zara",
+		"email": "zara@yahoo.com",
+		"password": "password12345"
+	},
+	{
+		"name": "Omar",
+		"email": "omar2k20@gmail.com",
+		"password": "password12345"
+	},
+	{
+		"name": "Aisha",
+		"email": "aisha@aol.com",
+		"password": "password12345"
+	},
+	{
+		"name": "Lyla",
+		"email": "lyla@hotmail.com",
+		"password": "password12345"
+	},
+	{
+		"name": "Dante",
+		"email": "dante@gmail.com",
+		"password": "password12345"
+	},
+	{
+		"name": "Mia",
+		"email": "mia2k20@aol.com",
+		"password": "password12345"
+	}
+]
