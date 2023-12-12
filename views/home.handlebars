@@ -1,0 +1,17 @@
+<h1>console.blog</h1>
+{{#if blogs.length}}
+<ul>
+  {{#each blogs}}
+  {{#with this}}
+  <li>
+    <h3>{{title}}</h3>
+    <p>{{content}}</p>
+    <p>Author: {{user.username}}</p>
+    <p>Post Date: {{formatDate date_created}}</p>
+  </li>
+  {{/with}}
+  {{/each}}
+</ul>
+{{else}}
+<p>No recent blog posts available.</p>
+{{/if}}

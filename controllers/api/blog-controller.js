@@ -15,8 +15,6 @@ const blogController = {
       res.status(500).json({ message: 'Internal server error' });
     }
   },
-
-  // Other methods for handling blog-related functionalities...
 };
 
 module.exports = blogController;

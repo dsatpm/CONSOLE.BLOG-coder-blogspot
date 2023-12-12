@@ -4,12 +4,12 @@ const User = require('./User');
 
 // Defines blog associations
 Blog.belongsTo(User, {
-    foreignKey: 'userId'
+    foreignKey: 'user_id'
 });
 
 // Defines user associations
 User.hasMany(Blog, {
-    foreignKey: 'userId'
+    foreignKey: 'user_id'
 });
 
 // Exports models

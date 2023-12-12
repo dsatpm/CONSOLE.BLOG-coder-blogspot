@@ -7,6 +7,9 @@ const homeController = {
         order: [['date_created', 'DESC']],
         include: [{ model: User, attributes: ['username'] }],
         limit: 5,
+        where: {
+          user_id: req.session.user_id,
+        },
       });
 
       res.status(200).json(recentPosts);
@@ -16,16 +19,24 @@ const homeController = {
     }
   },
 
-  renderHomePage: (req, res) => {
+  renderHomePage: async (req, res) => {
     try {
-      res.render('home');
+      const blogData = await Blog.findAll({
+        order: [['date_created', 'DESC']],
+        include: [{ model: User, attributes: ['username'] }],
+        limit: 5,
+      });
+
+      const data = blogData.map((blog) => blog.get({ plain: true }));
+
+      res.render('home', {
+        blogs: data,
+      });
     } catch (err) {
       console.error(err);
       res.status(500).json({ message: 'Internal server error' });
     }
   },
-
-  // Other methods for handling home-related functionalities...
 };
 
 module.exports = homeController;
