@@ -1,6 +1,14 @@
 const { Blog, User } = require('../models');
 
 const homeController = {
+  renderLoginPage: (req, res) => {
+    if (req.session.loggedIn) {
+      res.redirect('/');
+      return;
+    }
+
+    res.render('login');
+  },
   getRecentBlogPosts: async (req, res) => {
     try {
       const recentPosts = await Blog.findAll({
