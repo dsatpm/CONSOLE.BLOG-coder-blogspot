@@ -1,3 +1,4 @@
+{{#if loggedIn}}
 <h1>console.blog</h1>
 {{#if blogs.length}}
 <ul>
@@ -15,3 +16,8 @@
 {{else}}
 <p>No recent blog posts available.</p>
 {{/if}}
+{{else}}
+<p>Please <a href="/login">login</a> to view blog posts.</p>
+{{> login}}
+{{/if}}
+```
