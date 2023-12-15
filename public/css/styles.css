@@ -1,3 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  height: 100vh;
+  width: 100%;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  gap: 1rem;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #ccc;
+}
+
+.header-container h1 {
+  font-size: 40px;
+}
+
+.header-container p {
+  font-size: 20px;
+}
+
+.user-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 1rem;
+  width: 25%;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.user-container a {
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+section h2 {
+  font-size: 24px;
+}
+
+section ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  width: 50%;
+}
+
+section li {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  height: 100vh;
+  width: 50%;
+}
+
+input {
+  margin: 0.25rem 0;
+  padding: 0.5rem;
+  width: 50%;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+}
+
+button {
+  margin: 0.5rem 0;
+  padding: 0.75rem;
+  width: 50%;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: #2e0bcd;
+  cursor: pointer;
+  color: white;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+footer p {
+  margin: 0.5rem 0;
+  text-align: center;
 }

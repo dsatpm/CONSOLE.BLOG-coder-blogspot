@@ -9,12 +9,22 @@ const homeController = {
 
     res.render('login');
   },
+
+  renderSignupPage: (req, res) => {
+    if (req.session.loggedIn) {
+      res.redirect('/');
+      return;
+    }
+
+    res.render('signup');
+  },
+
   getRecentBlogPosts: async (req, res) => {
     try {
       const recentPosts = await Blog.findAll({
         order: [['date_created', 'DESC']],
         include: [{ model: User, attributes: ['username'] }],
-        limit: 5,
+        limit: 6,
         where: {
           user_id: req.session.user_id,
         },

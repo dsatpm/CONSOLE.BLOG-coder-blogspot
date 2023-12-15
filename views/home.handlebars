@@ -1,23 +1,20 @@
-{{#if loggedIn}}
-<h1>console.blog</h1>
-{{#if blogs.length}}
-<ul>
-  {{#each blogs}}
-  {{#with this}}
-  <li>
-    <h3>{{title}}</h3>
-    <p>{{content}}</p>
-    <p>Author: {{user.username}}</p>
-    <p>Post Date: {{formatDate date_created}}</p>
-  </li>
-  {{/with}}
-  {{/each}}
-</ul>
-{{else}}
-<p>No recent blog posts available.</p>
-{{/if}}
-{{else}}
-<p>Please <a href="/login">login</a> to view blog posts.</p>
-{{> login}}
-{{/if}}
-```
+{{>header}}
+<section>
+  {{#if blogs.length}}
+  <ul>
+    {{#each blogs}}
+    {{#with this}}
+    <li>
+      <h2>{{title}}</h2>
+      <p>{{content}}</p>
+      <p>Author: {{user.username}}</p>
+      <p>Post Date: {{formatDate date_created}}</p>
+    </li>
+    {{/with}}
+    {{/each}}
+  </ul>
+  {{else}}
+  <p>No recent blog posts available.</p>
+  {{/if}}
+</section>
+{{>footer}}

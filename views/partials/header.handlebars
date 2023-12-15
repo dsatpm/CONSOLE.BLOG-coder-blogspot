@@ -1,4 +1,14 @@
 <header>
-    <h1>Header</h1>
-    <p>Header content</p>
+    <div class="header-container">
+        <h1>console.blog</h1>
+        <p>Blog posts from the console.</p>
+    </div>
+    <div class="user-container">
+        {{#if user}}
+        <a href="/logout">Logout</a>
+        {{else}}
+        <a href="/signup">Signup</a>
+        <a href="/login">Login</a>
+        {{/if}}
+    </div>
 </header>
