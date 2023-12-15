@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
       },
       {
         model: Comment,
-        attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+        attributes: ['id', 'content', 'post_id', 'user_id', 'created_at'],
         include: {
           model: User,
           attributes: ['username'],
@@ -83,7 +83,7 @@ router.post('/', withAuth, (req, res) => {
     });
 });
 
-// puts a vote on a post
+// puts a comment on a post
 router.put('/:id', withAuth, (req, res) => {
   Post.update(
     {
