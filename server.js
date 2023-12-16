@@ -1,10 +1,10 @@
-// Imports Express, Sequelize, Session, Handlebars, and Routes
+// Import dependencies
 const path = require('path');
 const express = require('express');
 const exphbs = require('express-handlebars');
 const session = require('express-session');
-const routes = require('./routes');
 const sequelize = require('./config/connection');
+const routes = require('./controllers');
 const helpers = require('./utils/helpers');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
