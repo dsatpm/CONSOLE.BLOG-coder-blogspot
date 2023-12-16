@@ -9,7 +9,7 @@ Comment.init({
     autoIncrement: true,
   },
   content: {
-    type: DataTypes.STRING,
+    type: DataTypes.TEXT,
     validate: {
       len: [3],
     },
