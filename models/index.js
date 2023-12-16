@@ -1,16 +1,42 @@
 //  Models to be exported to the server
-const Blog = require('./Blog');
+const Post = require('./Post');
 const User = require('./User');
+const Comment = require('./Comment');
 
-// Defines blog associations
-Blog.belongsTo(User, {
-    foreignKey: 'user_id'
+// user has many posts
+User.hasMany(Post, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
 });
 
-// Defines user associations
-User.hasMany(Blog, {
-    foreignKey: 'user_id'
+// user has many comments
+User.hasMany(Comment, {
+  foreignKey: 'user_id'
+});
+
+// post belongs to user
+Post.belongsTo(User, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
+});
+
+// post has many comments
+Post.hasMany(Comment, {
+  foreignKey: 'post_id',
+  onDelete: 'CASCADE'
+});
+
+// comment belongs to user
+Comment.belongsTo(User, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
+});
+
+// comment belongs to post
+Comment.belongsTo(Post, {
+  foreignKey: 'post_id',
+  onDelete: 'CASCADE'
 });
 
 // Exports models
-module.exports = { Blog, User };
+module.exports = { Post, User, Comment };
