@@ -40,6 +40,11 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+// get signup page
+router.get('/signup', (req, res) => {
+  res.render('signup');
+});
+
 // get post by id, unless user is not logged in
 router.get('/post/:id', async (req, res) => {
   try {
