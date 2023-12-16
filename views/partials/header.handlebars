@@ -4,11 +4,16 @@
         <p>Blog posts from the console.</p>
     </div>
     <div class="user-container">
-        {{#if user}}
-        <a href="/logout">Logout</a>
+        <a href="/">Home</a>
+        <a href="/dashboard">Dashboard</a>
+        {{#if loggedIn}}
+        <a href="/" id="logout">Logout</a>
         {{else}}
-        <a href="/signup">Signup</a>
         <a href="/login">Login</a>
         {{/if}}
     </div>
 </header>
+
+{{#if loggedIn}}
+<script src="/public/js/logout.js"></script>
+{{/if}}

@@ -1,11 +1,13 @@
 <form action="/login" method="post">
   <h1>Login</h1>
-  <input type="email" id="email" name="email" placeholder="Email" required>
+  <input id="usernameLogin" type="text" autofocus="true" placeholder="Username" required />
   <br>
-  <input type="password" id="password" name="password" placeholder="Password" required>
+  <input id="passwordLogin" type="password" autofocus="true" placeholder="Password" required />
   <br>
   <button type="submit">Login</button>
   <p>
     Don't have an account? <a href="/signup">Sign up</a>
   </p>
 </form>
+
+<script src="/public/js/login.js"></script>
