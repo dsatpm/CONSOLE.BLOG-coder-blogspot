@@ -2,15 +2,15 @@
   {{#each userPosts}}
   <div class="card">
     <h2><a href="/post/{{id}}">{{title}}</a></h2>
+    <a href="/dashboard/{{id}}">Edit</a>
     <p>{{content}}</p>
     <p><strong>Posted on:</strong> {{format_date date_created}}</p>
     {{> comments}}
   </div>
   {{/each}}
 </section>
-<form action="/dashboard/new" method="POST">
-  <h2>New Post</h2>
-  <input type="text" id="title" name="title" placeholder="Title">
-  <textarea id="content" name="content" placeholder="Enter new post here..."></textarea>
-  <button type="submit">+ New Post</button>
-</form>
+<div class="new-post-container">
+  <a href="/dashboard/new">
+    <button type="button">+ New Post</button>
+  </a>
+</div>

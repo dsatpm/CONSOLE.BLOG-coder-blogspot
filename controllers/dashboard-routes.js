@@ -37,6 +37,12 @@ router.get('/', withAuth, async (req, res) => {
   }
 });
 
+// gets page for new post
+router.get('/new', (req, res) => {
+  console.log('hello???')
+  res.render('new-post');
+});
+
 // get a single post by id for dashboard
 router.get('/:id', withAuth, async (req, res) => {
   try {
@@ -75,9 +81,5 @@ router.get('/:id', withAuth, async (req, res) => {
   }
 });
 
-// gets new post
-router.get('/new', (req, res) => {
-  res.render('new-post');
-});
 
 module.exports = router;

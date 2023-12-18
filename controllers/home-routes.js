@@ -83,33 +83,5 @@ router.get('/post/:id', async (req, res) => {
   }
 });
 
-// get post-comments
-router.get('/post-comments', async (req, res) => {
-  try {
-    const getPostComments = await Comment.findOne({
-      where: {
-        post_id: req.params.id,
-      },
-      attributes: ['id', 'comment', 'post_id', 'user_id', 'date_created'],
-      include: {
-        model: User,
-        attributes: ['username'],
-      },
-    });
-    const getComments = await getPostComments;
-
-    if (!getComments) {
-      res.status(404).json({ message: 'No comment found with this id' });
-      return;
-    }
-
-    const comment = getComments.get({ plain: true });
-    res.render('/post-comments', { comment, logged_in: req.session.logged_in });
-
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
-});
 
 module.exports = router;

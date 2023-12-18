@@ -8,7 +8,7 @@ body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 	line-height: 1.5;
-	height: 100vh;
+	min-height: 100vh;
 	width: 100%;
 }
 
@@ -96,9 +96,11 @@ section li {
 }
 
 section.homepage,
-section.dashboard {
+section.dashboard,
+section.edit-post {
 	display: flex;
 	flex-wrap: wrap;
+	height: 100%;
 }
 
 .card {
@@ -137,30 +139,38 @@ section.dashboard {
 }
 
 .post {
-  width: 100%;
-  margin-bottom: 20px;
-  border: 1px solid black;
-  border-radius: 5px;
-  padding: 20px;
-  background-color: #f9f9f9;
+	width: 100%;
+	margin-bottom: 20px;
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 20px;
+	background-color: #f9f9f9;
 }
 
 .post-header {
-  border-bottom: 1px solid black;
-  margin-bottom: 10px;
+	border-bottom: 1px solid black;
+	margin-bottom: 10px;
 }
 
 .post-header h4 {
-  margin: 0;
+	margin: 0;
 }
 
 .post-header p {
-  color: #666;
-  font-size: 0.8em;
+	color: #666;
+	font-size: 0.8em;
 }
 
 .post-body p {
-  margin: 0 0 10px;
+	margin: 0 0 10px;
+}
+
+.new-post-container {
+	width: 100%;
+	margin-bottom: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 form {
@@ -169,42 +179,61 @@ form {
 	align-items: center;
 	justify-content: center;
 	margin: 0 auto;
-	height: 100vh;
-	width: 50%;
+	padding: 1rem;
+	height: 100%;
+	max-width: 500px;
+	margin-top: 2rem;
+	border: 2px solid black;
+	border-radius: 0.5rem;
+	box-shadow: 5px 5px 5px rgb(0, 0, 0);
+}
+
+form h2 {
+	text-align: center;
+	margin-bottom: 1rem;
+}
+
+label {
+	display: block;
+	margin-bottom: 0.5rem;
 }
 
 input {
 	margin: 0.25rem 0;
 	padding: 0.5rem;
-	width: 50%;
-	border: 1px solid #ccc;
+	width: 100%;
+	box-sizing: border-box;
+	border: 1px solid black;
 	border-radius: 0.25rem;
 }
 
 textarea {
 	margin: 0.25rem 0;
 	padding: 0.5rem;
-	width: 50%;
-	border: 1px solid #ccc;
+	width: 100%;
+	box-sizing: border-box;
+	border: 1px solid black;
 	border-radius: 0.25rem;
 }
 
 button {
 	margin: 0.5rem 0;
-	padding: 0.75rem;
-	width: 50%;
+	padding: 0.75rem 2rem;
 	border: none;
 	border-radius: 0.25rem;
 	background-color: #2e0bcd;
 	cursor: pointer;
 	color: white;
+	font-size: 18px;
+	font-weight: 500;
 }
 
 footer {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin: 0 auto;
+	margin-top: auto;
+	height: 60px;
 	width: 100%;
 }
 
