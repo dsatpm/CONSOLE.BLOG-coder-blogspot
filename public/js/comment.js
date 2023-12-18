@@ -1,35 +1,46 @@
 async function commentFormHandler(event) {
-  event.preventDefault();
+	event.preventDefault();
 
-  const textComment = document
-    .querySelector('input[name="comment-body"]')
-    .value.trim();
-  const post_id = window.location.toString().split('/')[
-    window.location.toString().split('/').length - 1
-  ];
+	const textComment = document
+		.querySelector('input[name="comment-body"]')
+		.value.trim();
+	const post_id = window.location.toString().split('/')[
+		window.location.toString().split('/').length - 1
+	];
 
-  console.log(textComment);
-  console.log(post_id);
+	const response = await fetch('/api/users', {
+		method: 'GET',
+		headers: {
+			'Content-Type': 'application/json',
+		},
+	});
 
-  if (textComment) {
-    const response = await fetch('/api/comments', {
-      method: 'POST',
-      body: JSON.stringify({
-        post_id,
-        textComment,
-      }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
-    if (response.ok) {
-      document.location.reload();
-    } else {
-      alert(response.statusText);
-    }
-  }
+	let user;
+
+	if (response.ok) {
+		user = await response.json();
+	}
+
+	if (textComment && user) {
+		const commentResponse = await fetch('/api/comments', {
+			method: 'POST',
+			body: JSON.stringify({
+				post_id,
+				comment: textComment,
+				user_id: user.id,
+			}),
+			headers: {
+				'Content-Type': 'application/json',
+			},
+		});
+		if (commentResponse.ok) {
+			document.location.reload();
+		} else {
+			alert(response.statusText);
+		}
+	}
 }
 
 document
-  .querySelector('#commentForm')
-  .addEventListener('submit', commentFormHandler);
+	.querySelector('#commentForm')
+	.addEventListener('submit', commentFormHandler);

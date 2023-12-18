@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Post, User, Vote, Comment } = require('../../models');
+const { Post, User, Comment } = require('../../models');
 const sequelize = require('../../config/connection');
 const withAuth = require('../../utils/auth');
 
@@ -7,9 +7,9 @@ const withAuth = require('../../utils/auth');
 router.get('/', (req, res) => {
   Post.findAll({
     // query configuration
-    attributes: ['id', 'post_url', 'title', 'created_at'],
+    attributes: ['id', 'post_url', 'title', 'date_created'],
     // order the posts from most recent to least
-    order: [['created_at', 'DESC']],
+    order: [['date_created', 'DESC']],
     // from the User table, include the post creator's user name
     include: [
       {
@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
       },
       {
         model: Comment,
-        attributes: ['id', 'content', 'post_id', 'user_id', 'created_at'],
+        attributes: ['id', 'comment', 'post_id', 'user_id', 'date_created'],
         include: {
           model: User,
           attributes: ['username'],
@@ -39,7 +39,7 @@ router.get('/:id', (req, res) => {
     where: {
       id: req.params.id,
     },
-    attributes: ['id', 'content', 'title', 'created_at'],
+    attributes: ['id', 'content', 'title', 'date_created'],
     // include the models here
     include: [
       {
@@ -48,7 +48,7 @@ router.get('/:id', (req, res) => {
       },
       {
         model: Comment,
-        attributes: ['id', 'content', 'post_id', 'user_id', 'created_at'],
+        attributes: ['id', 'comment', 'post_id', 'user_id', 'date_created'],
         include: {
           model: User,
           attributes: ['username'],

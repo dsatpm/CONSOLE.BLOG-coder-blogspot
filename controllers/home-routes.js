@@ -1,17 +1,16 @@
 const router = require('express').Router();
 const { Post, User, Comment } = require('../models');
 const sequelize = require('../config/connection');
-const { get } = require('./dashboard-routes');
 
 // get all posts for homepage
 router.get('/', async (req, res) => {
   try {
     const getPosts = await Post.findAll({
-      attributes: ['id', 'title', 'content', 'created_at'],
+      attributes: ['id', 'title', 'content', 'date_created'],
       include: [
         {
           model: Comment,
-          attributes: ['id', 'content', 'post_id', 'user_id', 'created_at'],
+          attributes: ['id', 'comment', 'post_id', 'user_id', 'date_created'],
           include: {
             model: User,
             attributes: ['username'],
@@ -52,12 +51,12 @@ router.get('/post/:id', async (req, res) => {
       where: {
         id: req.params.id,
       },
-      attributes: ['id', 'title', 'content', 'created_at'],
+      attributes: ['id', 'title', 'content', 'date_created'],
       // include models here
       include: [
         {
           model: Comment,
-          attributes: ['id', 'content', 'post_id', 'user_id', 'created_at'],
+          attributes: ['id', 'comment', 'post_id', 'user_id', 'date_created'],
           include: {
             model: User,
             attributes: ['username'],
@@ -91,7 +90,7 @@ router.get('/post-comments', async (req, res) => {
       where: {
         post_id: req.params.id,
       },
-      attributes: ['id', 'content', 'post_id', 'user_id', 'created_at'],
+      attributes: ['id', 'comment', 'post_id', 'user_id', 'date_created'],
       include: {
         model: User,
         attributes: ['username'],

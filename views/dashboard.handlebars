@@ -1,15 +1,16 @@
-{{> header}}
-{{#if posts.length}}
-<section>
-  <h2>Your Posts</h2>
-  {{#each posts as |post|}}
-  {{> dashboard-post post}}
+<section class="dashboard">
+  {{#each userPosts}}
+  <div class="card">
+    <h2><a href="/post/{{id}}">{{title}}</a></h2>
+    <p>{{content}}</p>
+    <p><strong>Posted on:</strong> {{format_date date_created}}</p>
+    {{> comments}}
+  </div>
   {{/each}}
-
 </section>
-{{/if}}
-
-<button type="submit"><a href="/dashboard/new">+ New Post</a></button>
-{{> footer}}
-
-<script src="/javascript/add-post.js"></script>
+<form action="/dashboard/new" method="POST">
+  <h2>New Post</h2>
+  <input type="text" id="title" name="title" placeholder="Title">
+  <textarea id="content" name="content" placeholder="Enter new post here..."></textarea>
+  <button type="submit">+ New Post</button>
+</form>

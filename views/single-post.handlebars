@@ -1,16 +1,16 @@
 {{> post-info post}}
 
 {{#if loggedIn}}
+
 <form id="commentForm">
 
-  <label>Comment</label>
+  <label class="form-label">Comment</label>
   <input id="comment" name="comment-body" />
 
   <button type="submit">Submit</button>
 </form>
-{{/if}}
 
-{{> comments post.comments}}
+{{/if}}
 
 {{#if loggedIn}}
 <script src="/public/js/comment.js"></script>

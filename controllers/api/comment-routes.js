@@ -36,7 +36,7 @@ router.post('/', withAuth, async (req, res) => {
   if (req.session) {
     try {
       const postComment = await Comment.create({
-        content: req.body.content,
+        comment: req.body.comment,
         post_id: req.body.post_id,
         user_id: req.session.user_id,
       });
@@ -54,7 +54,7 @@ router.put('/:id', withAuth, async (req, res) => {
   try {
     const updateComment = await Comment.update(
       {
-        content: req.body.content,
+        comment: req.body.comment,
       },
       {
         where: {

@@ -1,0 +1,102 @@
+[
+	{
+		"comment": "Great post!",
+		"user_id": 1,
+		"post_id": 1
+	},
+	{
+		"comment": "Interesting thoughts.",
+		"user_id": 2,
+		"post_id": 2
+	},
+	{
+		"comment": "I learned something new!",
+		"user_id": 3,
+		"post_id": 3
+	},
+	{
+		"comment": "Thanks for sharing!",
+		"user_id": 4,
+		"post_id": 4
+	},
+	{
+		"comment": "Looking forward to more.",
+		"user_id": 5,
+		"post_id": 5
+	},
+	{
+		"comment": "This is amazing!",
+		"user_id": 1,
+		"post_id": 6
+	},
+	{
+		"comment": "Can't agree more.",
+		"user_id": 2,
+		"post_id": 7
+	},
+	{
+		"comment": "Impressive insights.",
+		"user_id": 3,
+		"post_id": 8
+	},
+	{
+		"comment": "Incredible content!",
+		"user_id": 4,
+		"post_id": 9
+	},
+	{
+		"comment": "Well written!",
+		"user_id": 5,
+		"post_id": 10
+	},
+	{
+		"comment": "I totally agree!",
+		"user_id": 1,
+		"post_id": 1
+	},
+	{
+		"comment": "Keep up the good work!",
+		"user_id": 2,
+		"post_id": 2
+	},
+	{
+		"comment": "Fascinating insights!",
+		"user_id": 3,
+		"post_id": 3
+	},
+	{
+		"comment": "Brilliant writing!",
+		"user_id": 4,
+		"post_id": 4
+	},
+	{
+		"comment": "I appreciate your perspective.",
+		"user_id": 5,
+		"post_id": 5
+	},
+	{
+		"comment": "Insightful analysis!",
+		"user_id": 1,
+		"post_id": 6
+	},
+	{
+		"comment": "I couldn't agree more!",
+		"user_id": 2,
+		"post_id": 7
+	},
+	{
+		"comment": "I learned something new!",
+		"user_id": 3,
+		"post_id": 8
+	},
+	{
+		"comment": "Thanks for sharing!",
+		"user_id": 4,
+		"post_id": 9
+	},
+	{
+		"comment": "Looking forward to more.",
+		"user_id": 5,
+		"post_id": 10
+	}
+]

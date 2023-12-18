@@ -1,0 +1,52 @@
+[
+	{
+		"title": "First Post",
+		"content": "This is the content of the first post.",
+		"user_id": 1
+	},
+	{
+		"title": "Amazing Journey",
+		"content": "Exploring new places and making memories.",
+		"user_id": 2
+	},
+	{
+		"title": "Tech Trends",
+		"content": "Discussing the latest trends in technology.",
+		"user_id": 3
+	},
+	{
+		"title": "Coding Adventures",
+		"content": "Writing code and solving problems.",
+		"user_id": 4
+	},
+	{
+		"title": "Thoughts on Nature",
+		"content": "Reflecting on the beauty of nature.",
+		"user_id": 5
+	},
+	{
+		"title": "Favorite Recipes",
+		"content": "Sharing delicious recipes and cooking tips.",
+		"user_id": 1
+	},
+	{
+		"title": "Book Recommendations",
+		"content": "Discovering new books and sharing recommendations.",
+		"user_id": 2
+	},
+	{
+		"title": "Fitness Goals",
+		"content": "Setting and achieving fitness goals.",
+		"user_id": 3
+	},
+	{
+		"title": "Movie Night",
+		"content": "Discussing favorite movies and must-watch films.",
+		"user_id": 4
+	},
+	{
+		"title": "Artistic Expressions",
+		"content": "Exploring creativity through various art forms.",
+		"user_id": 5
+	}
+]
