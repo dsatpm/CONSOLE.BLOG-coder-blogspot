@@ -1,6 +1,6 @@
 # Console.Blog - A Coder's Blog Spot
 
-Using MVC (Model View Controller), I created a full stack blog application using Express, Handlebars, and Sequelize to allow users to create an account, log in, view their personal dashboard, leave comments on blog posts, post new topics, edit, and delete posts. The project is deployed at Heroku [here]() 
+Using MVC (Model View Controller), I created a full stack blog application using Express, Handlebars, and Sequelize to allow users to create an account, log in, view their personal dashboard, leave comments on blog posts, post new topics, edit, and delete posts. The project is deployed at Heroku [here](https://console-dot-blog-9aca03c81354.herokuapp.com/).
 
 
 ## Tech Used
