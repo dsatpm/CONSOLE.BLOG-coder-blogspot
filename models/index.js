@@ -1,7 +1,7 @@
 //  Models to be exported to the server
-const Post = require('./people-post-text');
-const User = require('./people-blog-text');
-const Comment = require('./people-comment-text');
+const Post = require('./post');
+const User = require('./user');
+const Comment = require('./comment');
 
 // user has many posts
 User.hasMany(Post, {
