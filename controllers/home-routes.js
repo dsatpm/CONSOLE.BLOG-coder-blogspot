@@ -23,7 +23,7 @@ router.get('/', async (req, res) => {
       ],
     });
     const allPosts = getPosts.map((post) => post.get({ plain: true }));
-    res.render('homepage', { allPosts, logged_in: req.session.logged_in });
+    res.render('homepage.jsx', { allPosts, loggedIn: req.session.logged_in });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
