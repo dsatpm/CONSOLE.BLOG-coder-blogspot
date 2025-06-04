@@ -2,6 +2,7 @@
 const path = require('path');
 const express = require('express');
 const exphbs = require('express-handlebars');
+const reactViews = require('express-react-views');
 const session = require('express-session');
 const sequelize = require('./config/connection');
 const routes = require('./controllers');
@@ -31,10 +32,14 @@ const hbs = exphbs.create({
   helpers,
 });
 
-// Set up Handlebars
+// Set up view engines for Handlebars and React
 app.engine('handlebars', hbs.engine);
+app.engine('jsx', reactViews.createEngine());
 app.set('view engine', 'handlebars');
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', [
+  path.join(__dirname, 'views'),
+  path.join(__dirname, 'views-jsx'),
+]);
 
 // Set up middleware
 app.use(express.json());
